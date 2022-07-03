@@ -1,0 +1,10 @@
+@import './scss/reset', './scss/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: $bgColor;
+    font-family: 'Abril Fatface', cursive;
+}
