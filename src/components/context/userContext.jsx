@@ -1,14 +1,14 @@
 import { createContext, useState, useContext } from 'react';
 
-const UserContext = createContext();
+const LoginContext = createContext();
 
-const UserProvider = ({children}) => {
+const LoginProvider = ({children}) => {
     
-    const [user, setUser] = useState("")
-    const values = {user, setUser}
-    return <UserContext.Provider value={values}>{children}</UserContext.Provider>
+    const [login, setLogin] = useState(localStorage.getItem('login'))
+    const values = {login, setLogin}
+    return <LoginContext.Provider value={values}>{children}</LoginContext.Provider>
 }
 
-const useUser = () => useContext(UserContext)
+const useLogin = () => useContext(LoginContext)
 
-export {useUser, UserProvider}
+export {useLogin, LoginProvider}

@@ -14,19 +14,14 @@
 
     .left{
         background-color: $lightPurple;
-        color: white;
-        text-align: center;
-        font-size: 0.8rem;
         width: 20rem;
         border-radius: 20px;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        justify-content: center;
 
         img{
             width: 300px;
-            margin-top: 1rem;
         }
     }
 
@@ -39,28 +34,6 @@
         text-align: center;
         border-radius: 20px;
 
-        form{
-            display: flex;
-            flex-direction: column;
-            width: 70%;
-            margin: auto;
-            gap: 1rem;
-            
-            input{
-                height: 2rem;
-                padding-left: 0.5rem;
-                background-color: $lightPurple;
-                border: none;
-                outline: none;
-                color: white;
-
-                &::placeholder{
-                    color: $bgColor;
-                    font-weight:bold;
-                    opacity: 0.7;
-                }
-            }
-
             button{
                 height: 2.2rem;
                 background-color: $bgColor;
@@ -71,26 +44,17 @@
                 font-family: 'Abril Fatface', cursive;
                 cursor: pointer;
                 margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                min-width: 15rem;
+                max-width: 20rem;
+                margin: auto;
             }
         }
-
-        p{
-            color: white;
-            margin-bottom: 3rem;
-            font-style: italic;
-            font-size: 0.8rem;
-        }
     }
-}
 
-.italic{
-    font-style: italic;
-}
-
-.underlined{
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 .wrapper{
     display: flex;
