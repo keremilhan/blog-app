@@ -1,0 +1,48 @@
+@import '../../scss/variables';
+
+#blog-card-container{
+    background-color: $bgCard;
+    width: 20rem;
+    height: 20rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 5px 5px 15px 5px $headerBgDark; 
+    box-shadow: 5px 5px 15px 5px $headerBgDark;
+    border: none;
+    cursor: pointer;
+
+    h1{
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    &>p{
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    #top-footer{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+        padding-bottom: 0.25rem;
+    }
+
+    #bottom-footer{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.25rem;
+
+
+        #icons{
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+}

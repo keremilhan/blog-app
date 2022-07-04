@@ -6,7 +6,6 @@ import logo from '../../img/logo.png'
 import { useLogin } from '../context/userContext'
 import { auth } from '../../firebase'
 import { signOut } from 'firebase/auth'
-import {FaUserAlt} from 'react-icons/fa'
 import toast from 'react-hot-toast'
 
 
@@ -15,13 +14,14 @@ import toast from 'react-hot-toast'
 const Navbar = () => {
   const navigate = useNavigate()
 
-  const userSignOut = async () => {
+  const userSignOut = () => {
     try {
-      await signOut(auth);
+      signOut(auth);
       navigate("/");
       toast.success("Logged out succesfully...");
-      localStorage.setItem('login', false)
+      localStorage.clear()
       setLogin(false)
+      navigate('/', {replace:true})
     } catch (err) {
       toast.error(err.message);
     }
@@ -55,7 +55,7 @@ const Navbar = () => {
               <Link  to="create-post">Create Post</Link>
             </li>          
             <li>
-              <Link onClick={userSignOut}  to="profile">Logout</Link>
+              <Link onClick={userSignOut} to="/">Logout</Link>
             </li>          
             
             </>       

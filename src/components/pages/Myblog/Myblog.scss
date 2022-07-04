@@ -1,0 +1,21 @@
+@import '../../../scss/variables';
+
+#create-post-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#create-post{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    margin-top: 5rem;
+    color: white;
+}
+
